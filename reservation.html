@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fablé Restaurant - Special Moments</title>
+    <!-- Link Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts (Example: Lato & Great Vibes) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- Link your CSS -->
+    <link rel="stylesheet" href="reservation.css">
+</head>
+<body>
+
+    <!-- Fixed Header -->
+    <header class="site-header fixed-nav">
+        <div class="container nav-container">
+            <a href="#" class="logo">Fablé</a>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="reservation.html" class="active">Reservations</a></li> <!-- Active link -->
+              
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-right">
+                <div class="social-icons">
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+                <a href="#" class="btn btn-primary btn-book">Book a Table</a>
+                 <!-- Hamburger Menu Icon -->
+                 <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                 </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- Hero Section - Special Moments -->
+        <section class="hero-section hero-special-moments"> <!-- Add a specific class -->
+            <div class="hero-overlay"></div> <!-- Dark overlay -->
+            <div class="container hero-content">
+                <span class="tagline">La Cuisine</span> <!-- Different script text -->
+                <h1 class="main-headline">SPECIAL MOMENTS</h1> <!-- Different headline -->
+                <hr class="divider">
+                <p> <!-- Different paragraph text -->
+                    An unforgettable dining experience in the heart of Covent Garden, London. <br>
+                    Contemporary british menu, inspired by the traditions of Great Britain.
+                </p>
+            </div>
+        </section>
+        <!-- End Hero Section -->
+
+        <!-- Add other page sections below -->
+        
+    <!-- Booking Section -->
+    <section class="booking-section">
+        <div class="container">
+            <div class="booking-content">
+                <!-- Image Column -->
+                <div class="booking-image animate-on-scroll fade-in-left">
+                    <!-- Unsplash Image of a smiling woman -->
+                    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0" alt="Smiling woman welcoming guests">
+                 </div>
+
+                <!-- Form Column -->
+                <div class="booking-form-area animate-on-scroll fade-in-right">
+                    <div class="booking-title">
+                        <span class="sub-heading">Reservations</span>
+                        <h2 class="main-heading">Online Booking</h2>
+                    </div>
+                    <p>
+                        Curabitur quas nets lacus ets nulat iaculis loremis etis nisle varius vitae seditum fugiatum
+                        ligula aliquam qui sequi. Lorem ipsum dolor sit amet, consectetur adipiscing elit rutrum
+                        eleif arcu sit aspernatur nets fugit, sed quia.
+                    </p>
+
+                    <form action="#" method="POST" class="booking-form">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <input type="text" id="fullName" name="fullName" placeholder="Full Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="emailAddress" name="emailAddress" placeholder="Email Address" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Phone Number" required>
+                            </div>
+                            <div class="form-group">
+                                <select id="guestCount" name="guestCount" required>
+                                    <option value="" disabled selected>How Many?</option>
+                                    <option value="1">1 Person</option>
+                                    <option value="2">2 People</option>
+                                    <option value="3">3 People</option>
+                                    <option value="4">4 People</option>
+                                    <option value="5">5 People</option>
+                                    <option value="6">6 People</option>
+                                    <option value="7">7 People</option>
+                                    <option value="8">8+ People</option>
+                                </select>
+                            </div>
+                             <div class="form-group">
+                                <input type="date" id="bookingDate" name="bookingDate" placeholder="Booking Date" required onfocus="(this.type='date')" onblur="(this.value ? this.type='date' : this.type='text')">
+                            </div>
+                            <div class="form-group">
+                                <input type="time" id="bookingTime" name="bookingTime" placeholder="Booking Time" required onfocus="(this.type='time')" onblur="(this.value ? this.type='time' : this.type='text')">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-book-submit">Book Your Table</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- Video Hero Section -->
+    <section class="video-hero-section">
+        <!-- Video Background -->
+        <div class="video-background">
+             <video autoplay loop muted playsinline poster="placeholder-image.jpg"> <!-- Add a poster image -->
+                <!-- Provide multiple sources for compatibility -->
+                 <!-- Replace with your actual video file paths -->
+                <source src="sadss (1).mp4" type="video/mp4">
+                <source src="your-video.webm" type="video/webm">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <!-- Dark Overlay -->
+        <div class="video-overlay"></div>
+
+        <!-- Content -->
+        <div class="container hero-content">
+            <h2 class="main-headline">
+                WE LOVE <span class="highlight">OUR CLIENTS</span>
+            </h2>
+            <a href="#history" class="btn btn-outline-light">
+                Discover History
+            </a>
+        </div>
+    </section>
+    <!-- End Video Hero Section -->
+
+    <!-- Other sections go here -->
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-main">
+                <!-- Column 1: About Us -->
+                <div class="footer-col">
+                    <h3>About Us</h3>
+                    <p>Quis autem velis et reprehender etims quiste voluptate velit esse quam nihil etsa illum sedit consequatur quias.</p>
+                    <a href="#story" class="btn btn-primary">Our Story</a>
+                </div>
+
+                <!-- Column 2: Latest Recipes -->
+                <div class="footer-col">
+                    <h3>Latest Recipes</h3>
+                    <ul class="footer-list">
+                        <li><a href="#" style="color: wheat;">Cheddar Cheese Cauliflower Tots</a></li>
+                        <li><a href="#" style="color: wheat;">Garlic Chicken & White Wine Sauce</a></li>
+                        <li><a href="#" style="color: wheat;">Spinach Mozzarella Grilled Cheese</a></li>
+                        <li><a href="#" style="color: wheat;">Mini Chicken Roasted Cups</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Featured Plates -->
+                <div class="footer-col">
+                    <h3>Featured Plates</h3>
+                    <div class="featured-grid">
+                        <a href="#"><img src="https://images.unsplash.com/photo-1581299894007-aaa50297cf16" alt="Featured Plate 1"></a>
+                        <a href="#"><img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c" alt="Featured Plate 2"></a>
+                        <a href="#"><img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c" alt="Featured Plate 3"></a>
+                        <a href="#"><img src="https://images.unsplash.com/photo-1547592180-85f173990554" alt="Featured Plate 4"></a>
+                        <a href="#"><img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c" alt="Featured Plate 5"></a>
+                        <a href="#"><img src="https://images.unsplash.com/photo-1547592180-85f173990554" alt="Featured Plate 6"></a>
+                    </div>
+                </div>
+
+                <!-- Column 4: Contact Details -->
+                <div class="footer-col">
+                    <h3>Contact Details</h3>
+                     <p>Quis autem velis eti reprehender etimes quiste volupta velit esse quam nihil.</p>
+                    <ul class="contact-list">
+                        <li><i class="fas fa-map-marker-alt"></i> Oxford Street, London, UK, N1 1ED</li>
+                        <li><i class="fas fa-phone"></i> +44 987 654 321 / +44 123 456 789</li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:contact@restaurant.com">contact@restaurant.com</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="footer-divider">
+
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>© 2016-2024 Fable. Designed by <a href="#" target="_blank" rel="noopener noreferrer">Epic Agency</a></p>
+                 </div>
+
+                 <a href="#top" class="back-to-top" aria-label="Back to top">
+                    <i class="fas fa-chevron-up"></i>
+                </a>
+
+                <div class="footer-social">
+                    <span>Follow Us:</span>
+                    <ul>
+                        <li><a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a></li>
+                        <li><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                         <li><a href="#" aria-label="Youtube"><i class="fab fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- Add JS if needed for controls or fallbacks -->
+
+    <!-- Optional: Mobile Nav Toggle JS -->
+     <script>
+        const menuToggle = document.querySelector('.mobile-nav-toggle');
+        const mainNav = document.querySelector('.main-nav');
+        if (menuToggle && mainNav) {
+            menuToggle.addEventListener('click', () => {
+                mainNav.classList.toggle('active');
+            });
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
+            if (!elementsToAnimate.length) return;
+
+            const observerOptions = { threshold: 0.1 };
+            const observerCallback = (entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            };
+            const intersectionObserver = new IntersectionObserver(observerCallback, observerOptions);
+            elementsToAnimate.forEach(el => intersectionObserver.observe(el));
+        });
+    </script>
+
+</body>
+</html>

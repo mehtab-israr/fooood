@@ -1,0 +1,956 @@
+/* --- Basic Reset & Variables --- */
+:root {
+    --primary-color: #f0ad4e; /* Yellow/Gold */
+    --dark-color: #1a1a1a;
+    --light-color: #ffffff;
+    --text-color: #cccccc;
+    --header-height: 70px; /* Adjust as needed */
+}
+
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
+    padding-top: var(--header-height); /* Offset for fixed header */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+ul { list-style: none; }
+img { max-width: 100%; height: auto; display: block; }
+
+/* --- Button Styles --- */
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+    text-align: center;
+}
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--dark-color);
+    border: 1px solid var(--primary-color);
+}
+.btn-primary:hover {
+    background-color: #eea236;
+    border-color: #eea236;
+    color: var(--dark-color);
+}
+
+/* --- Header / Fixed Nav Styles --- */
+.site-header {
+    background-color: rgba(26, 26, 26, 0.9);
+    color: var(--light-color);
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: var(--light-color);
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 1px;
+}
+.logo:hover { color: var(--light-color); }
+
+.main-nav ul { display: flex; }
+.main-nav li { margin-left: 25px; }
+.main-nav a {
+    color: var(--light-color);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.9em;
+    letter-spacing: 0.5px;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+.main-nav a:hover,
+.main-nav a.active { /* Style for active link */
+    color: var(--primary-color);
+}
+
+.header-right { display: flex; align-items: center; }
+.social-icons {
+    display: flex;
+    align-items: center;
+    margin-right: 25px;
+    padding-right: 25px;
+    border-right: 1px solid #555;
+}
+.social-icons a { color: var(--light-color); margin-left: 18px; font-size: 1.1em; }
+.social-icons a:hover { color: var(--primary-color); }
+.btn-book { padding: 8px 20px; font-size: 0.85em; }
+
+.mobile-nav-toggle { /* Basic style for hamburger */
+    display: none;
+    background: none;
+    border: none;
+    color: var(--light-color);
+    font-size: 1.8em;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+
+/* --- Hero Section Styles --- */
+.hero-section {
+    /* Adjust height calculation if necessary */
+    height: calc(90vh - var(--header-height)); /* Example: 90% of viewport height */
+    min-height: 550px; /* Ensure minimum height */
+    /* Replace with your actual background image */
+  background-image: url("https://images.unsplash.com/photo-1504674900247-0877df9cc836");
+    background-size: cover;
+    background-position: center center;
+    /* background-attachment: fixed; */ /* Optional: Parallax effect */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--light-color);
+}
+
+.hero-overlay { /* Dark overlay */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.55); /* Adjust darkness (0.0 to 1.0) */
+    z-index: 1;
+}
+
+.hero-content { /* Position content above overlay */
+    position: relative;
+    z-index: 2;
+    max-width: 750px; /* Limit content width */
+    padding: 0 20px; /* Add padding for smaller screens */
+}
+
+.tagline {
+    font-family: 'Great Vibes', cursive; /* Script font */
+    color: var(--primary-color); /* Yellow/gold color */
+    font-size: 3.2em; /* Adjust size */
+    display: block;
+    margin-bottom: -15px; /* Pull headline up slightly */
+    line-height: 1;
+}
+
+.main-headline {
+    font-family: 'Lato', sans-serif;
+    font-weight: 900; /* Extra bold */
+    font-size: 4.5em; /* Adjust size */
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+    color: var(--light-color);
+}
+
+.divider { /* Short yellow line */
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-color);
+    border: none;
+    margin: 0 auto 25px auto; /* Center the divider */
+}
+
+.hero-content p {
+    font-size: 1.15em;
+    color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+    max-width: 600px; /* Limit paragraph width */
+    margin: 0 auto; /* Center paragraph */
+    line-height: 1.7;
+}
+
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 991px) {
+    :root { --header-height: 60px; }
+    body { padding-top: var(--header-height); }
+    .site-header { height: var(--header-height); }
+
+    .main-nav { /* Basic mobile nav hiding/showing */
+        display: none;
+        &.active {
+            display: block; position: absolute; top: var(--header-height); left: 0; width: 100%;
+            background-color: rgba(26, 26, 26, 0.95); padding: 15px 0;
+            ul { flex-direction: column; align-items: center; }
+            li { margin: 10px 0; }
+        }
+    }
+    .social-icons { display: none; }
+    .mobile-nav-toggle { display: block; }
+
+    .logo { font-size: 1.6em; }
+    .tagline { font-size: 2.8em; }
+    .main-headline { font-size: 3.5em; }
+    .hero-content p { font-size: 1.1em; }
+    .hero-section { height: calc(80vh - var(--header-height)); min-height: 450px;}
+}
+
+@media (max-width: 767px) {
+    .tagline { font-size: 2.5em; margin-bottom: -10px; }
+    .main-headline { font-size: 2.8em; letter-spacing: 2px; }
+    .hero-content p { font-size: 1em; }
+     .hero-section { height: auto; min-height: calc(100vh - var(--header-height)); padding: 80px 0;} /* Adjust height for mobile */
+}
+
+@media (max-width: 575px) {
+     :root { --header-height: 55px; }
+     body { padding-top: var(--header-height); }
+     .site-header { height: var(--header-height); }
+     .main-nav.active { top: var(--header-height); } /* Adjust mobile menu position */
+
+     .btn-book { display: none; } /* Hide book button */
+     .logo { font-size: 1.4em; }
+     .tagline { font-size: 2.2em; }
+     .main-headline { font-size: 2.2em; letter-spacing: 1px; }
+     .hero-content p { font-size: 0.95em; }
+     .divider { margin-bottom: 20px;}
+}
+/* --- Make sure you have basic styles and variables --- */
+:root {
+    --primary-color: #f0ad4e; /* Yellow/Gold */
+    --text-color-dark: #333;
+    --text-color-light: #666;
+    --title-color: #222;
+}
+body {
+    font-family: 'Lato', sans-serif;
+    color: var(--text-color-dark);
+}
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* --- Menu Section Styles --- */
+.menu-section {
+    padding: 80px 0;
+    background-color: #ffffff;
+    overflow: hidden; /* Contain animations */
+}
+
+.menu-columns {
+    display: flex;
+    gap: 60px; /* Space between columns */
+}
+
+.menu-column {
+    flex: 1; /* Each column takes half the space */
+    min-width: 0; /* Prevent flexbox overflow issues */
+}
+
+.menu-title {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--title-color);
+    margin-bottom: 35px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+/* Yellow underline for titles */
+.menu-title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: var(--primary-color);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.menu-items-list {
+    display: flex;
+    flex-direction: column;
+    gap: 35px; /* Space between menu items */
+}
+
+.menu-item {
+    display: flex;
+    align-items: flex-start; /* Align image top with text */
+    gap: 20px; /* Space between image and details */
+}
+
+.menu-item-image {
+    width: 80px;  /* Fixed width */
+    height: 80px; /* Fixed height */
+    object-fit: cover; /* Crop image nicely */
+    border-radius: 3px; /* Optional: slight rounding */
+    flex-shrink: 0; /* Prevent image from shrinking */
+}
+
+.menu-item-details {
+    flex-grow: 1; /* Allow details to take remaining space */
+    min-width: 0; /* Prevent flexbox overflow issues */
+}
+
+.menu-item-header {
+    display: flex;
+    align-items: baseline; /* Align name and price along their baseline */
+    margin-bottom: 8px;
+    width: 100%;
+}
+
+.menu-item-name {
+    font-size: 1.15em;
+    font-weight: 700;
+    color: var(--text-color-dark);
+    margin: 0;
+    /* Prevent name from shrinking too much */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Add ... if name is too long */
+    flex-shrink: 0; /* Don't let name shrink */
+    padding-right: 5px; /* Small space before dots */
+}
+
+.menu-item-dots {
+    flex-grow: 1; /* Take up all available space */
+    overflow: hidden; /* Hide overflowing dots */
+    margin: 0 5px; /* Space around dots */
+    /* Create the dotted line effect */
+    border-bottom: 2px dotted var(--primary-color);
+    position: relative;
+    bottom: 4px; /* Adjust vertical position */
+    min-width: 10px; /* Ensure dots have some minimum space */
+}
+
+.menu-item-price {
+    font-size: 1.1em;
+    font-weight: 700;
+    color: var(--primary-color);
+    white-space: nowrap; /* Prevent price from wrapping */
+    padding-left: 5px; /* Small space after dots */
+}
+
+.menu-item-description {
+    font-size: 0.95em;
+    color: var(--text-color-light);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* --- Animation Styles (Reuse from previous examples) --- */
+.animate-on-scroll {
+    opacity: 0;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.animate-on-scroll.fade-in-left {
+    transform: translateX(-50px);
+}
+.animate-on-scroll.fade-in-right {
+    transform: translateX(50px);
+}
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 991px) {
+    .menu-columns {
+        gap: 40px;
+    }
+    .menu-title {
+        font-size: 1.6em;
+    }
+    .menu-item-name, .menu-item-price {
+        font-size: 1.1em;
+    }
+     .menu-item-image {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+@media (max-width: 767px) {
+    .menu-columns {
+        flex-direction: column; /* Stack columns */
+        gap: 50px; /* Adjust gap for stacked layout */
+    }
+    .menu-column {
+        /* Reset flex property if needed, but flex: 1 should be okay */
+    }
+     /* Adjust animation for stacked layout */
+     .animate-on-scroll.fade-in-left,
+     .animate-on-scroll.fade-in-right {
+        transform: translateY(40px); /* Animate from bottom */
+     }
+     .animate-on-scroll.is-visible {
+         transform: translateY(0);
+     }
+}
+
+@media (max-width: 480px) {
+    .menu-title {
+        font-size: 1.4em;
+    }
+    .menu-item-name, .menu-item-price {
+        font-size: 1em;
+    }
+    .menu-item-description {
+        font-size: 0.9em;
+    }
+    .menu-item-image {
+        width: 60px;
+        height: 60px;
+    }
+    .menu-item {
+        gap: 15px;
+    }
+    .menu-items-list {
+        gap: 30px;
+    }
+}
+/* --- Basic Styles & Variables --- */
+:root {
+    --primary-color: #f0ad4e; /* Yellow/Gold */
+    --dark-bg: #1a1a1a; /* Very dark background */
+    --text-light: #e0e0e0; /* Light gray text */
+    --text-medium: #aaaaaa; /* Medium gray text */
+    --text-heading-light: #ffffff; /* White for main heading */
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    /* Ensure body has a default background if needed */
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.btn { /* Base button styles if not defined elsewhere */
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid transparent; /* Base border */
+}
+
+/* --- Awarded Menu Section Styles --- */
+.awarded-menu-section {
+    padding: 80px 0;
+    position: relative; /* Needed for pseudo-elements or absolute positioning if used */
+    overflow: hidden; /* Contain animations and background */
+
+    /* Background Combination */
+    background-color: var(--dark-bg); /* Base dark color */
+    /* Add texture image first, then the food image */
+    background-image: url('https://www.transparenttextures.com/patterns/concrete-wall-2.png'), /* Replace with your texture */
+                      url('https://images.unsplash.com/photo-1516684818715-4f6d767b4962?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'); /* Replace with your food image (e.g., ginger/honey) */
+
+    background-position: top left, /* Texture position */
+                         center right; /* Food image position (adjust as needed) */
+
+    background-repeat: repeat, /* Texture repeat */
+                       no-repeat; /* Food image no-repeat */
+
+    background-size: auto, /* Texture size */
+                     cover; /* Food image size (adjust: contain, 50% auto etc.) */
+                     /* Example: background-size: auto, 45% auto; */
+                     /* Example: background-position: top left, 80% 50%; */
+
+
+    color: var(--text-light); /* Default text color for the section */
+}
+
+/* Adjust container padding if background image overlaps content area */
+ .awarded-menu-section .container {
+     position: relative; /* Ensure content is above background pseudo-elements if used */
+     z-index: 2;
+     /* Optional: Add padding on the right if needed to avoid text overlap */
+     /* padding-right: 48%; */
+ }
+
+
+/* Section Title */
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title .sub-heading {
+    font-family: 'Great Vibes', cursive;
+    color: var(--primary-color);
+    font-size: 2.8em;
+    display: block;
+    margin-bottom: -10px;
+    line-height: 1;
+}
+
+.section-title .main-heading {
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-heading-light);
+    margin-top: 0;
+}
+
+/* Menu Grid */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+    gap: 30px 50px; /* Row gap, Column gap */
+    margin-bottom: 50px;
+}
+
+.menu-item-condensed {
+    /* Styles specific to items in this section */
+}
+
+.menu-item-header { /* Reusing styles from previous menu example */
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 8px;
+    width: 100%;
+}
+
+.menu-item-name {
+    font-size: 1.1em;
+    font-weight: 700;
+    color: var(--text-light); /* Lighter text for name */
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-shrink: 0;
+    padding-right: 5px;
+}
+
+.menu-item-dots { /* Reusing styles */
+    flex-grow: 1;
+    overflow: hidden;
+    margin: 0 5px;
+    border-bottom: 2px dotted var(--primary-color); /* Use primary color for dots */
+    position: relative;
+    bottom: 4px;
+    min-width: 10px;
+}
+
+.menu-item-price {
+    font-size: 1.1em;
+    font-weight: 700;
+    color: var(--primary-color); /* Primary color for price */
+    white-space: nowrap;
+    padding-left: 5px;
+}
+
+.menu-item-description {
+    font-size: 0.9em;
+    color: var(--text-medium); /* Medium gray for description */
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Button */
+.menu-button-container {
+    text-align: center; /* Center the button */
+}
+
+.btn.btn-outline {
+    background-color: transparent;
+    border-color: var(--text-medium); /* Use medium gray for border */
+    color: var(--text-light); /* Light text */
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 12px 35px;
+}
+
+.btn.btn-outline:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--dark-bg); /* Dark text on hover */
+}
+
+.btn.btn-outline i {
+    margin-right: 8px;
+    color: var(--primary-color); /* Icon color */
+    transition: color 0.3s ease;
+}
+
+.btn.btn-outline:hover i {
+    color: var(--dark-bg); /* Dark icon on hover */
+}
+
+
+/* --- Animation Styles --- */
+.animate-on-scroll {
+    opacity: 0;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+/* Add specific animation effects */
+.animate-on-scroll.fade-in-down { transform: translateY(-30px); }
+.animate-on-scroll.fade-in-up { transform: translateY(30px); }
+/* Add other effects like fade-in-left/right if needed for other elements */
+
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 991px) {
+     .awarded-menu-section {
+         /* Adjust background position/size for tablets */
+         background-position: top left, center right 10%;
+         background-size: auto, 55% auto;
+     }
+     .awarded-menu-section .container {
+         padding-right: 15px; /* Reset potential overlap padding */
+     }
+
+    .section-title .main-heading { font-size: 2.2em; }
+    .section-title .sub-heading { font-size: 2.5em; }
+    .menu-grid { gap: 25px 40px; }
+}
+
+
+@media (max-width: 767px) {
+    .awarded-menu-section {
+         /* Stack background or significantly reduce food image size */
+         background-image: url('https://www.transparenttextures.com/patterns/concrete-wall-2.png'); /* Only texture */
+         /* OR */
+         /* background-position: top left, bottom right; */
+         /* background-size: auto, 80% auto; */
+         padding: 60px 0;
+     }
+
+    .menu-grid {
+        grid-template-columns: 1fr; /* Stack items */
+        gap: 30px; /* Only row gap needed */
+        margin-bottom: 40px;
+    }
+    .section-title .main-heading { font-size: 2em; }
+    .section-title .sub-heading { font-size: 2.2em; }
+}
+
+@media (max-width: 480px) {
+    .section-title .main-heading { font-size: 1.8em; }
+    .section-title .sub-heading { font-size: 2em; }
+    .menu-item-name, .menu-item-price { font-size: 1em; }
+    .menu-item-description { font-size: 0.85em; }
+    .btn.btn-outline { padding: 10px 25px; font-size: 0.85em;}
+}
+
+/* --- Footer Styles --- */
+.site-footer {
+    background-color: #2f2f2f; /* Dark gray background */
+    /* Optional: Add texture like the image */
+    /* background-image: url('your-texture-image.png'); */
+    padding: 60px 0 20px; /* Padding top/bottom */
+    color: #cccccc;
+    font-size: 0.95em;
+    position: relative; /* Needed for absolute positioning of back-to-top if used */
+}
+
+.footer-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px; /* Spacing between columns */
+    margin-bottom: 40px;
+}
+
+.footer-col {
+    flex: 1; /* Try to take equal space */
+    min-width: 250px; /* Minimum width before wrapping */
+    opacity: 0; /* Start hidden for animation */
+    animation: fadeInUp 0.6s ease-out forwards; /* Apply animation */
+}
+
+/* --- Animation --- */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Stagger the animation for columns */
+.footer-col:nth-child(1) { animation-delay: 0.1s; }
+.footer-col:nth-child(2) { animation-delay: 0.2s; }
+.footer-col:nth-child(3) { animation-delay: 0.3s; }
+.footer-col:nth-child(4) { animation-delay: 0.4s; }
+
+.footer-bottom {
+    opacity: 0; /* Start hidden for animation */
+    animation: fadeInUp 0.6s ease-out 0.5s forwards; /* Delay after columns */
+}
+
+
+/* --- Column Specific Styles --- */
+.footer-col h3 {
+    color: #ffffff;
+    font-size: 1.2em;
+    margin-top: 0;
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Yellow underline for headings */
+.footer-col h3::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: #f0ad4e; /* Yellow/gold color */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.footer-col p {
+    margin-bottom: 15px;
+}
+
+/* "Our Story" Button */
+.btn.btn-primary {
+    display: inline-block;
+    background-color: #f0ad4e;
+    color: #333333; /* Dark text on button */
+    padding: 10px 25px;
+    border: 1px solid #f0ad4e;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.9em;
+    margin-top: 15px;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+}
+
+.btn.btn-primary:hover {
+    background-color: #eea236; /* Slightly darker yellow */
+    border-color: #eea236;
+    color: #333333;
+}
+
+/* Recipe List */
+.footer-list li {
+    padding: 8px 0;
+    
+    border-bottom: 1px dotted #555555; /* Dotted separator */
+}
+
+.footer-list li:last-child {
+    border-bottom: none;
+}
+
+.footer-list li a:hover {
+    color: #f0ad4e; /* Highlight on hover */
+}
+
+/* Featured Plates Grid */
+.featured-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 8px;
+}
+
+.featured-grid img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1; /* Make images square */
+    object-fit: cover; /* Cover the area without distortion */
+    border: 1px solid #444;
+    transition: opacity 0.3s ease;
+}
+.featured-grid a:hover img {
+    opacity: 0.8;
+}
+
+/* Contact List */
+.contact-list li {
+    display: flex;
+    align-items: flex-start; /* Align icon top */
+    margin-bottom: 12px;
+}
+
+.contact-list i {
+    margin-right: 12px;
+    margin-top: 4px; /* Align icon slightly lower */
+    color: #f0ad4e; /* Yellow/gold icon color */
+    width: 16px; /* Fixed width for alignment */
+    text-align: center;
+}
+.contact-list a {
+    color: #cccccc;
+}
+.contact-list a:hover {
+    color: #f0ad4e;
+}
+
+/* --- Footer Bottom Styles --- */
+.footer-divider {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(85, 85, 85, 0), rgba(85, 85, 85, 0.75), rgba(85, 85, 85, 0)); /* Fading dotted line alternative */
+    /* border-top: 1px dotted #555555; */ /* Or use a simple dotted line */
+    margin: 0 0 20px 0;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+    gap: 15px; /* Space between items when wrapping */
+    font-size: 0.9em;
+    color: #aaaaaa;
+}
+
+.footer-copyright p {
+    margin: 0;
+}
+
+.footer-copyright a {
+    color: #cccccc;
+    text-decoration: underline;
+}
+.footer-copyright a:hover {
+    color: #ffffff;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    display: inline-block;
+    background-color: #f0ad4e;
+    color: #ffffff; /* White icon */
+    width: 40px;
+    height: 40px;
+    line-height: 40px; /* Vertically center icon */
+    text-align: center;
+    border-radius: 3px; /* Slightly rounded corners */
+    transition: background-color 0.3s ease;
+    /* Optional: Absolute positioning if needed */
+    /* position: absolute; */
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
+    /* bottom: 20px; */
+}
+
+.back-to-top:hover {
+    background-color: #eea236;
+    color: #ffffff;
+}
+
+/* Social Icons */
+.footer-social {
+    display: flex;
+    align-items: center;
+}
+
+.footer-social span {
+    margin-right: 15px;
+}
+
+.footer-social ul {
+    display: flex;
+}
+
+.footer-social li {
+    margin-left: 12px;
+}
+
+.footer-social a {
+    color: #aaaaaa;
+    font-size: 1.3em; /* Slightly larger icons */
+}
+
+.footer-social a:hover {
+    color: #ffffff;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 991px) {
+    .footer-main {
+        gap: 40px; /* Increase gap when stacking */
+    }
+    .footer-col {
+        flex-basis: calc(50% - 20px); /* Two columns layout */
+        min-width: unset; /* Remove min-width */
+    }
+     .featured-grid {
+        grid-template-columns: repeat(4, 1fr); /* Adjust grid if needed */
+    }
+}
+
+@media (max-width: 767px) {
+    .footer-col {
+        flex-basis: 100%; /* Stack columns */
+    }
+    .footer-bottom {
+        flex-direction: column; /* Stack bottom elements */
+        text-align: center;
+    }
+    .footer-social {
+        margin-top: 15px;
+    }
+    .back-to-top {
+        /* Reset positioning if it was absolute */
+        /* position: static; */
+        /* transform: none; */
+        margin-top: 10px;
+    }
+     .featured-grid {
+        grid-template-columns: repeat(3, 1fr); /* Keep 3 columns or adjust */
+    }
+}

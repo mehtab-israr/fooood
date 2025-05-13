@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fablé Restaurant - Hero Section</title>
+    <!-- Link Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts (Example: Lato & Great Vibes) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- Link your CSS -->
+    <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+
+    <!-- Fixed Header -->
+    <header class="site-header fixed-nav">
+        <div class="container nav-container">
+            <a href="#" class="logo">Fablé</a>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About Us</a></li> <!-- Active link example -->
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="reservation.html">Reservations</a></li>
+                    
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-right">
+                <div class="social-icons">
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+                <a href="#" class="btn btn-primary btn-book">Book a Table</a>
+                 <!-- Hamburger Menu Icon (for mobile - requires JS) -->
+                 <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                 </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-overlay"></div> <!-- Dark overlay -->
+            <div class="container hero-content">
+                <span class="tagline">True Passion</span>
+                <h1 class="main-headline">NATURAL FLAVOURS</h1>
+                <hr class="divider">
+                <p>
+                    Opened in February 2016, La Cuisine is the largest restaurants in London. <br>
+                    A bustling atmospheric restaurant, with a huge open kitchen.
+                </p>
+            </div>
+        </section>
+        <!-- End Hero Section -->
+
+        <!-- Add other page sections below -->
+         <!-- Menu Section -->
+    <section class="menu-section">
+        <div class="container">
+            <div class="menu-columns">
+
+                <!-- Column 1: Breakfast & Starters -->
+                <div class="menu-column animate-on-scroll fade-in-left">
+                    <h2 class="menu-title">Breakfast & Starters</h2>
+                    <div class="menu-items-list">
+                        <!-- Menu Item 1 -->
+                        <div class="menu-item">
+                            <img src="https://images.unsplash.com/photo-1478145046317-39f10e56b5e9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="Gazpacho Soup" class="menu-item-image">
+                            <div class="menu-item-details">
+                                <div class="menu-item-header">
+                                    <h3 class="menu-item-name">English Breakfast</h3>
+                                    <span class="menu-item-dots"></span>
+                                    <span class="menu-item-price">$12.95</span>
+                                </div>
+                                <p class="menu-item-description">
+                                    Scrambled eggs with crispy bacon, sausage, fresh black pudding, breadcrumbs, onion, mustard, canbbery nut, baked brie, rucola, tomato & mushroom.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Menu Item 2 -->
+                        <div class="menu-item">
+                             <img src="https://images.unsplash.com/photo-1611270629569-8b357cb88da9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80">
+                            <div class="menu-item-details">
+                                <div class="menu-item-header">
+                                    <h3 class="menu-item-name">Avocado Toast</h3>
+                                    <span class="menu-item-dots"></span>
+                                    <span class="menu-item-price">$10.50</span>
+                                </div>
+                                <p class="menu-item-description">
+                                    Toasted sourdough, mashed avocado, poached egg, chili flakes, microgreens, and a drizzle of olive oil.
+                                </p>
+                            </div>
+                        </div>
+                         <!-- Menu Item 3 -->
+                        <div class="menu-item">
+                            <img src="https://images.unsplash.com/photo-1611270629569-8b357cb88da9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="Pasta dish" class="menu-item-image">
+                            <div class="menu-item-details">
+                                <div class="menu-item-header">
+                                    <h3 class="menu-item-name">Pancakes Stack</h3>
+                                    <span class="menu-item-dots"></span>
+                                    <span class="menu-item-price">$9.95</span>
+                                </div>
+                                <p class="menu-item-description">
+                                    Fluffy buttermilk pancakes served with maple syrup, butter, and optional berries or chocolate chips.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 2: Main Course -->
+                <div class="menu-column animate-on-scroll fade-in-right">
+                    <h2 class="menu-title">Main Course</h2>
+                    <div class="menu-items-list">
+                        <!-- Menu Item 4 -->
+                        <div class="menu-item">
+                             <img src="https://images.unsplash.com/photo-1611270629569-8b357cb88da9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="Hearty Stew" class="menu-item-image">
+                            <div class="menu-item-details">
+                                <div class="menu-item-header">
+                                    <h3 class="menu-item-name">Grilled Salmon</h3>
+                                    <span class="menu-item-dots"></span>
+                                    <span class="menu-item-price">$18.95</span>
+                                </div>
+                                <p class="menu-item-description">
+                                    Perfectly grilled salmon fillet served with roasted asparagus, lemon-dill sauce, and quinoa pilaf.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Menu Item 5 -->
+                        <div class="menu-item">
+                           <img src="https://images.unsplash.com/photo-1611270629569-8b357cb88da9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="Vegetable Soup" class="menu-item-image">
+                            <div class="menu-item-details">
+                                <div class="menu-item-header">
+                                    <h3 class="menu-item-name">Classic Burger</h3>
+                                    <span class="menu-item-dots"></span>
+                                    <span class="menu-item-price">$14.50</span>
+                                </div>
+                                <p class="menu-item-description">
+                                    Juicy beef patty, cheddar cheese, lettuce, tomato, onion, pickles, special sauce on a brioche bun, served with fries.
+                                </p>
+                            </div>
+                        </div>
+                         <!-- Menu Item 6 -->
+                        <div class="menu-item">
+                            <img src="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="Pizza" class="menu-item-image">
+                            <div class="menu-item-details">
+                                <div class="menu-item-header">
+                                    <h3 class="menu-item-name">Margherita Pizza</h3>
+                                    <span class="menu-item-dots"></span>
+                                    <span class="menu-item-price">$13.00</span>
+                                </div>
+                                <p class="menu-item-description">
+                                    Traditional Neapolitan pizza with San Marzano tomatoes, fresh mozzarella, basil, and olive oil.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    
+    <!-- End Menu Section -->
+    </main>
+    <div class="menu-column animate-on-scroll fade-in-right">
+        <h2 class="menu-title">Main Course</h2>
+        <div class="menu-items-list">
+            <!-- Menu Item 4 -->
+            <div class="menu-item">
+                 <img src="https://images.unsplash.com/photo-1611270629569-8b357cb88da9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="Hearty Stew" class="menu-item-image">
+                <div class="menu-item-details">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-name">Grilled Salmon</h3>
+                        <span class="menu-item-dots"></span>
+                        <span class="menu-item-price">$18.95</span>
+                    </div>
+                    <p class="menu-item-description">
+                        Perfectly grilled salmon fillet served with roasted asparagus, lemon-dill sauce, and quinoa pilaf.
+                    </p>
+                </div>
+            </div>
+            <!-- Menu Item 5 -->
+            <div class="menu-item">
+               <img src="https://images.unsplash.com/photo-1611270629569-8b357cb88da9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="Vegetable Soup" class="menu-item-image">
+                <div class="menu-item-details">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-name">Classic Burger</h3>
+                        <span class="menu-item-dots"></span>
+                        <span class="menu-item-price">$14.50</span>
+                    </div>
+                    <p class="menu-item-description">
+                        Juicy beef patty, cheddar cheese, lettuce, tomato, onion, pickles, special sauce on a brioche bun, served with fries.
+                    </p>
+                </div>
+            </div>
+             <!-- Menu Item 6 -->
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="Pizza" class="menu-item-image">
+                <div class="menu-item-details">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-name">Margherita Pizza</h3>
+                        <span class="menu-item-dots"></span>
+                        <span class="menu-item-price">$13.00</span>
+                    </div>
+                    <p class="menu-item-description">
+                        Traditional Neapolitan pizza with San Marzano tomatoes, fresh mozzarella, basil, and olive oil.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+</section>
+<!-- Other sections go here -->
+
+    <!-- Awarded Menu Section -->
+    <section class="awarded-menu-section">
+        <div class="container">
+            <!-- Section Title -->
+            <div class="section-title animate-on-scroll fade-in-down">
+                <span class="sub-heading">Best Recipes</span>
+                <h2 class="main-heading">Awarded Chefs</h2>
+            </div>
+
+            <!-- Menu Grid -->
+            <div class="menu-grid">
+                <!-- Item 1 -->
+                <div class="menu-item-condensed animate-on-scroll fade-in-up" style="animation-delay: 0.1s;">
+                    <div class="menu-item-header">
+                        <h4 class="menu-item-name">English Breakfast</h4>
+                        <span class="menu-item-dots"></span>
+                        <span class="menu-item-price">$12.95</span>
+                    </div>
+                    <p class="menu-item-description">
+                        Scrambled eggs with crispy bacon, sausage, black pudding, tomato & mushroom.
+                    </p>
+                </div>
+                 <!-- Item 2 -->
+                <div class="menu-item-condensed animate-on-scroll fade-in-up" style="animation-delay: 0.2s;">
+                    <div class="menu-item-header">
+                        <h4 class="menu-item-name">Lasagna Classica</h4>
+                        <span class="menu-item-dots"></span>
+                        <span class="menu-item-price">$19.55</span>
+                    </div>
+                    <p class="menu-item-description">
+                       Broccoli rabe, italian sausage, peperoncino, tomatoes, flour and roasted garlic.
+                    </p>
+                </div>
+                 <!-- Item 3 -->
+                <div class="menu-item-condensed animate-on-scroll fade-in-up" style="animation-delay: 0.3s;">
+                    <div class="menu-item-header">
+                        <h4 class="menu-item-name">Vegetables Soup</h4>
+                        <span class="menu-item-dots"></span>
+                        <span class="menu-item-price">$9.95</span>
+                    </div>
+                    <p class="menu-item-description">
+                        Papaya salsa, sliced red radishes, avocado, corn tortilla, spicy tomato ketchup.
+                    </p>
+                </div>
+                 <!-- Item 4 -->
+                <div class="menu-item-condensed animate-on-scroll fade-in-up" style="animation-delay: 0.4s;">
+                    <div class="menu-item-header">
+                        <h4 class="menu-item-name">Toffee Pudding</h4>
+                        <span class="menu-item-dots"></span>
+                        <span class="menu-item-price">$10.50</span>
+                    </div>
+                    <p class="menu-item-description">
+                        Baked caramel colored sponge cake with raisins, ladled with warm toffee sauce.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Button Container -->
+            <div class="menu-button-container animate-on-scroll fade-in-up" style="animation-delay: 0.5s;">
+                <a href="#full-menu" class="btn btn-outline">
+                    <i class="fas fa-book-open"></i> Full Menu
+                </a>
+            </div>
+
+        </div>
+    </section>
+    <!-- End Awarded Menu Section -->
+
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-main">
+                <!-- Column 1: About Us -->
+                <div class="footer-col">
+                    <h3>About Us</h3>
+                    <p>Quis autem velis et reprehender etims quiste voluptate velit esse quam nihil etsa illum sedit consequatur quias.</p>
+                    <a href="#story" class="btn btn-primary">Our Story</a>
+                </div>
+
+                <!-- Column 2: Latest Recipes -->
+                <div class="footer-col">
+                    <h3>Latest Recipes</h3>
+                    <ul class="footer-list">
+                        <li><a href="#" style="color: wheat;">Cheddar Cheese Cauliflower Tots</a></li>
+                        <li><a href="#" style="color: wheat;">Garlic Chicken & White Wine Sauce</a></li>
+                        <li><a href="#" style="color: wheat;">Spinach Mozzarella Grilled Cheese</a></li>
+                        <li><a href="#" style="color: wheat;">Mini Chicken Roasted Cups</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Featured Plates -->
+                <div class="footer-col">
+                    <h3>Featured Plates</h3>
+                    <div class="featured-grid">
+                        <a href="#"><img src="https://images.unsplash.com/photo-1581299894007-aaa50297cf16" alt="Featured Plate 1"></a>
+                        <a href="#"><img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c" alt="Featured Plate 2"></a>
+                        <a href="#"><img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c" alt="Featured Plate 3"></a>
+                        <a href="#"><img src="https://images.unsplash.com/photo-1547592180-85f173990554" alt="Featured Plate 4"></a>
+                        <a href="#"><img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c" alt="Featured Plate 5"></a>
+                        <a href="#"><img src="https://images.unsplash.com/photo-1547592180-85f173990554" alt="Featured Plate 6"></a>
+                    </div>
+                </div>
+
+                <!-- Column 4: Contact Details -->
+                <div class="footer-col">
+                    <h3>Contact Details</h3>
+                     <p>Quis autem velis eti reprehender etimes quiste volupta velit esse quam nihil.</p>
+                    <ul class="contact-list">
+                        <li><i class="fas fa-map-marker-alt"></i> Oxford Street, London, UK, N1 1ED</li>
+                        <li><i class="fas fa-phone"></i> +44 987 654 321 / +44 123 456 789</li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:contact@restaurant.com">contact@restaurant.com</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="footer-divider">
+
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>© 2016-2024 Fable. Designed by <a href="#" target="_blank" rel="noopener noreferrer">Epic Agency</a></p>
+                 </div>
+
+                 <a href="#top" class="back-to-top" aria-label="Back to top">
+                    <i class="fas fa-chevron-up"></i>
+                </a>
+
+                <div class="footer-social">
+                    <span>Follow Us:</span>
+                    <ul>
+                        <li><a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a></li>
+                        <li><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                         <li><a href="#" aria-label="Youtube"><i class="fab fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Optional: Mobile Nav Toggle JS -->
+     <script>
+        const menuToggle = document.querySelector('.mobile-nav-toggle');
+        const mainNav = document.querySelector('.main-nav');
+        if (menuToggle && mainNav) {
+            menuToggle.addEventListener('click', () => {
+                mainNav.classList.toggle('active');
+            });
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
+            if (!elementsToAnimate.length) return;
+
+            const observerOptions = { threshold: 0.1 }; // Trigger when 10% visible
+            const observerCallback = (entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target); // Animate only once
+                    }
+                });
+            };
+            const intersectionObserver = new IntersectionObserver(observerCallback, observerOptions);
+            elementsToAnimate.forEach(el => intersectionObserver.observe(el));
+        });
+        document.addEventListener('DOMContentLoaded', () => {
+            const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
+            if (!elementsToAnimate.length) return;
+
+            const observerOptions = { threshold: 0.1 };
+            const observerCallback = (entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            };
+            const intersectionObserver = new IntersectionObserver(observerCallback, observerOptions);
+            elementsToAnimate.forEach(el => intersectionObserver.observe(el));
+        });
+    </script>
+
+</body>
+</html>

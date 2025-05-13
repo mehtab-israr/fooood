@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fablé Restaurant - Fixed Nav & Hero</title>
+    <!-- Link to Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts (Example: Lato & Great Vibes for script) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+
+    <header class="site-header fixed-nav">
+        <div class="container nav-container">
+            <a href="#" class="logo">Fablé</a>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About Us</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="reservation.html">Reservations</a></li>
+              
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-right">
+                <div class="social-icons">
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+                <a href="#" class="btn btn-primary btn-book">Book a Table</a>
+                 <!-- Hamburger Menu Icon (for mobile - requires JS to function) -->
+                 <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                 </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <span class="tagline">True Passion</span>
+                <h1 class="main-headline">NATURAL FLAVOURS</h1>
+                <hr class="divider">
+                <p>
+                    Opened in February 2016, La Cuisine is the largest restaurants in London. <br>
+                    A bustling atmospheric restaurant, with a huge open kitchen.
+                </p>
+            </div>
+        </section>
+
+        <!-- Add more content here to test scrolling -->
+        <section class="recipes-section">
+            <div class="container">
+                <div class="recipes-content">
+                    <!-- Image Column -->
+                    <div class="recipes-images animate-on-scroll fade-in-left">
+                        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Cake Slice">
+                        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Healthy Salad">
+                        <img src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Salmon Dish">
+                         <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Pizza Slice">
+                         <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Restaurant Plate">
+                        <img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Breakfast Bowl">
+                    </div>
+        
+                    <!-- Text Column -->
+                    <div class="recipes-text animate-on-scroll fade-in-right">
+                        <span class="sub-heading">Discover</span>
+                        <h2 class="main-heading">Best Recipes</h2>
+                        <p>
+                            Curabitur quas nets lacus ets nulat iaculis loremis etis nisle varius vitae seditum
+                            fugiatum ligula aliquam qui sequi. Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit rutrum eleif arcu sit aspernatur nets fugit, sed quia.
+                        </p>
+                        <a href="#recipes" class="btn btn-secondary">Our Recipes</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+         <!-- Chefs Section -->
+    <section class="chefs-section">
+        <div class="container">
+            <div class="chefs-content">
+                <!-- Text Column -->
+                <div class="chefs-text animate-on-scroll fade-in-left">
+                    <span class="sub-heading">Discover</span>
+                    <h2 class="main-heading">Our Chefs</h2>
+                    <p>
+                        Curabitur quas nets lacus ets nulat iaculis loremis etis nisle varius vitae seditum
+                        fugiatum ligula aliquam qui sequi. Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit rutrum eleif arcu sit aspernatur nets fugit, sed quia dused
+                        fuscentinusad sagittis odio magna, in ultricies ex tincidunt.
+                    </p>
+                    <div class="chefs-icons">
+                        <i class="fas fa-utensils"></i> <!-- Pot/Utensils -->
+                        <i class="fas fa-fish"></i>      <!-- Fish -->
+                        <i class="fas fa-cake-candles"></i> <!-- Cake (closest standard icon) -->
+                        <i class="fas fa-mug-hot"></i>   <!-- Coffee/Mug -->
+                    </div>
+                </div>
+
+                <!-- Image Column -->
+                <div class="chefs-image animate-on-scroll fade-in-right">
+                    <!-- Replace with a suitable chef image URL from Unsplash or other source -->
+                    <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Happy female chef giving thumbs up">
+                 </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-main">
+                <!-- Column 1: About Us -->
+                <div class="footer-col">
+                    <h3>About Us</h3>
+                    <p>Quis autem velis et reprehender etims quiste voluptate velit esse quam nihil etsa illum sedit consequatur quias.</p>
+                    <a href="#story" class="btn btn-primary">Our Story</a>
+                </div>
+
+                <!-- Column 2: Latest Recipes -->
+                <div class="footer-col">
+                    <h3>Latest Recipes</h3>
+                    <ul class="footer-list">
+                        <li><a href="#">Cheddar Cheese Cauliflower Tots</a></li>
+                        <li><a href="#">Garlic Chicken & White Wine Sauce</a></li>
+                        <li><a href="#">Spinach Mozzarella Grilled Cheese</a></li>
+                        <li><a href="#">Mini Chicken Roasted Cups</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Featured Plates -->
+                <div class="footer-col">
+                    <h3>Featured Plates</h3>
+                    <div class="featured-grid">
+                        <a href="#"><img src="https://images.unsplash.com/photo-1581299894007-aaa50297cf16" alt="Featured Plate 1"></a>
+                        <a href="#"><img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c" alt="Featured Plate 2"></a>
+                        <a href="#"><img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c" alt="Featured Plate 3"></a>
+                        <a href="#"><img src="https://images.unsplash.com/photo-1547592180-85f173990554" alt="Featured Plate 4"></a>
+                        <a href="#"><img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c" alt="Featured Plate 5"></a>
+                        <a href="#"><img src="https://images.unsplash.com/photo-1547592180-85f173990554" alt="Featured Plate 6"></a>
+                    </div>
+                </div>
+
+                <!-- Column 4: Contact Details -->
+                <div class="footer-col">
+                    <h3>Contact Details</h3>
+                     <p>Quis autem velis eti reprehender etimes quiste volupta velit esse quam nihil.</p>
+                    <ul class="contact-list">
+                        <li><i class="fas fa-map-marker-alt"></i> Oxford Street, London, UK, N1 1ED</li>
+                        <li><i class="fas fa-phone"></i> +44 987 654 321 / +44 123 456 789</li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:contact@restaurant.com">contact@restaurant.com</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="footer-divider">
+
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>© 2016-2024 Fable. Designed by <a href="#" target="_blank" rel="noopener noreferrer">Epic Agency</a></p>
+                 </div>
+
+                 <a href="#top" class="back-to-top" aria-label="Back to top">
+                    <i class="fas fa-chevron-up"></i>
+                </a>
+
+                <div class="footer-social">
+                    <span>Follow Us:</span>
+                    <ul>
+                        <li><a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a></li>
+                        <li><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                         <li><a href="#" aria-label="Youtube"><i class="fab fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Chefs Section -->
+        <!-- End of Recipes Section -->
+    </main>
+
+   
+    <!-- End Image Slider Section -->
+    <!-- Basic JS can be added here for mobile menu toggle -->
+     <script>
+        // Simple Mobile Nav Toggle Example (add more robust logic as needed)
+        const menuToggle = document.querySelector('.mobile-nav-toggle');
+        const mainNav = document.querySelector('.main-nav');
+
+        if (menuToggle && mainNav) {
+            menuToggle.addEventListener('click', () => {
+                mainNav.classList.toggle('active'); // You'll need CSS for .main-nav.active
+            });
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+
+const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
+
+if (!elementsToAnimate.length) {
+    console.log("No elements found to animate.");
+    return; // Exit if no elements to animate
+}
+
+const observerOptions = {
+    root: null, // relative to the viewport
+    rootMargin: '0px',
+    threshold: 0.1 // Trigger when 10% of the element is visible
+};
+
+const observerCallback = (entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            // Element is in view, add the 'is-visible' class
+            entry.target.classList.add('is-visible');
+            // Optional: Stop observing the element after it has been animated once
+            observer.unobserve(entry.target);
+        }
+        // Optional: You could add logic here to remove 'is-visible'
+        // if entry.isIntersecting is false, for animations that trigger
+        // every time the element scrolls in and out of view.
+    });
+};
+
+// Create the observer
+const intersectionObserver = new IntersectionObserver(observerCallback, observerOptions);
+
+// Observe each element
+elementsToAnimate.forEach(el => {
+    intersectionObserver.observe(el);
+});
+
+});
+  document.addEventListener('DOMContentLoaded', function () {
+  // Initialize the specific Swiper container
+  const imageSwiper = new Swiper('.image-swiper-container', {
+    // Optional parameters
+    direction: 'horizontal', // 'horizontal' or 'vertical'
+    loop: true, // Enable infinite loop
+    speed: 600, // Transition speed in ms
+
+    // How many slides to show
+    slidesPerView: 1, // Default: show 1 slide
+
+    // Space between slides
+    spaceBetween: 15, // Adjust space as needed
+
+    // Responsive breakpoints
+    breakpoints: {
+      // when window width is >= 640px
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20
+      },
+      // when window width is >= 992px
+      992: {
+        slidesPerView: 3, // Show 3 slides like the example
+        spaceBetween: 30
+      }
+    },
+
+    // If we need pagination (optional)
+    // pagination: {
+    //   el: '.swiper-pagination',
+    //   clickable: true,
+    // },
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+    // Optional: Autoplay
+    // autoplay: {
+    //   delay: 4000, // Delay between transitions (in ms)
+    //   disableOnInteraction: false, // Keep autoplaying even after user interaction
+    // },
+
+     // Optional: Add keyboard navigation
+     keyboard: {
+       enabled: true,
+       onlyInViewport: false,
+     },
+
+     // Optional: Make slides focusable for accessibility
+     watchSlidesProgress: true, // Needed for slides visibility classes
+     slideVisibleClass: 'swiper-slide-visible', // Optional: Add custom visible class
+  });
+});
+  // PASTE THE INTERSECTION OBSERVER JAVASCRIPT CODE HERE
+        // (From the previous "Discover Best Recipes" example)
+        document.addEventListener('DOMContentLoaded', () => {
+            const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
+            if (!elementsToAnimate.length) return;
+
+            const observerOptions = { threshold: 0.1 };
+            const observerCallback = (entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            };
+            const intersectionObserver = new IntersectionObserver(observerCallback, observerOptions);
+            elementsToAnimate.forEach(el => intersectionObserver.observe(el));
+        });
+  </script>
+
+
+</body>
+</html>

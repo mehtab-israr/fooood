@@ -1,0 +1,653 @@
+/* Basic Reset & Body Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* For smooth back-to-top scroll */
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #fff; /* Default text color, may be overridden by specific elements */
+    line-height: 1.6;
+    background-color: #333; /* Fallback if page doesn't have specific background */
+}
+
+.page-container {
+    width: 100%;
+    min-height: 100vh; /* Ensure it covers viewport height */
+    background-image: url('flat-lay-mexican-food-composition-with-copyspace.jpg'); /* The original image URL */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Makes background fixed during scroll for parallax-like effect */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px; /* Will be adjusted for mobile */
+    background-color: rgba(10, 10, 10, 0.85); /* Dark, slightly transparent background */
+    width: 100%;
+    position: fixed; /* Fixed header */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 80px;
+}
+
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+    order: 1; /* For responsive layout: Logo first */
+    /* margin-right: auto; Pushes logo left if hamburger is the only other direct child */
+}
+
+.main-nav { /* Changed from 'nav' to '.main-nav' to match HTML class */
+    order: 2; /* Desktop: Nav after logo */
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.main-nav ul li {
+    margin-left: 30px;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    padding-bottom: 8px;
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s ease, border-bottom-color 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+    color: #d4af37;
+    border-bottom-color: #d4af37;
+}
+
+.main-nav ul li a.active {
+    color: #fff;
+    border-bottom-color: #d4af37;
+}
+
+.main-nav ul li a.active:hover {
+    color: #fff;
+    border-bottom-color: #d4af37;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    order: 3; /* Desktop: Actions last */
+    margin-left: auto; /* Pushes actions to the right, after nav */
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    padding-left: 25px;
+    margin-left: 25px;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.social-icons a {
+    color: #fff;
+    margin-left: 18px;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:first-child {
+    margin-left: 0;
+}
+
+.social-icons a:hover {
+    color: #d4af37;
+}
+
+.cta-button {
+    background-color: #d4af37;
+    color: #333 !important; /* Dark text on gold button */
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    margin-left: 25px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    white-space: nowrap;
+}
+
+.cta-button:hover {
+    background-color: #c09b2e;
+}
+
+/* Hamburger Menu Icon Styles */
+.hamburger-menu {
+    display: none; /* Hidden on desktop */
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px;
+    order: 2; /* Mobile: Hamburger after logo */
+    margin-left: auto; /* Mobile: Pushes hamburger to the right if actions are hidden/reordered */
+}
+
+/* Main Content & Hero Section Styling */
+main { /* This 'main' is inside .page-container */
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 80px; /* Account for fixed header */
+    text-align: center;
+}
+
+.hero {
+    padding: 20px;
+}
+
+.hero-content .script-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 70px;
+    color: #d4af37;
+    margin-bottom: -10px;
+    font-weight: 400;
+}
+
+.hero-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.hero-content .separator {
+    width: 60px;
+    height: 3px;
+    background-color: #d4af37;
+    border: none;
+    margin: 0 auto 30px auto;
+}
+
+.hero-content p {
+    font-size: 16px;
+    color: #f0f0f0;
+    max-width: 550px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* Contact Section Styling */
+.contact-section {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly more opaque for better form readability */
+    color: #333; /* Dark text for content on light background */
+    opacity: 0; /* For fade-in animation */
+    transform: translateY(50px); /* For fade-in animation */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.contact-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.contact-section h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 15px; /* Adjusted margin */
+    color: #333; /* Ensure dark color */
+}
+
+.contact-section p { /* This p is specific to contact-section */
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto 40px auto; /* Bottom margin for spacing */
+}
+
+.form-wrapper {
+    max-width: 700px; /* Max width for the form area */
+    margin: 0 auto; /* Center the form area */
+}
+
+.form-wrapper form { /* Style the form itself if needed */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.form-wrapper input,
+.form-wrapper textarea {
+    padding: 15px;
+    border: 1px solid #ccc; /* Lighter border */
+    border-radius: 4px; /* Slightly rounded corners */
+    width: 100%; /* Default to full width, will be adjusted by media query */
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif; /* Ensure font consistency */
+    color: #333; /* Text color inside inputs */
+}
+
+.form-wrapper input::placeholder,
+.form-wrapper textarea::placeholder {
+    color: #999; /* Lighter placeholder text */
+}
+
+
+.form-wrapper textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+/* Two-column layout for specific inputs on wider screens within the form */
+@media (min-width: 600px) {
+    .form-wrapper input[type="text"],
+    .form-wrapper input[type="email"],
+    .form-wrapper input[type="tel"] {
+        width: calc(50% - 10px); /* Two columns with gap */
+    }
+}
+
+.submit-button {
+    background-color: #f9b233;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 15px 30px;
+    margin-top: 10px; /* Adjusted margin-top */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 4px;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    width: auto; /* Let button size to content */
+    /* To make it full width if only one button: */
+    /* width: 100%; */
+    /* max-width: 300px; margin-left: auto; margin-right: auto; */
+}
+
+.submit-button:hover {
+    background-color: #e09e20;
+}
+
+/* --- Footer Styles --- */
+.site-footer {
+    background-color: #2f2f2f;
+    padding: 60px 0 20px; /* Padding for content within, not the whole element if container is used */
+    color: #cccccc;
+    font-size: 0.95em;
+    position: relative;
+}
+
+.site-footer .container { /* Container for footer content */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; /* Padding for content within the container */
+}
+
+.footer-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 230px; /* Adjusted min-width */
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.footer-col:nth-child(1) { animation-delay: 0.1s; }
+.footer-col:nth-child(2) { animation-delay: 0.2s; }
+.footer-col:nth-child(3) { animation-delay: 0.3s; }
+.footer-col:nth-child(4) { animation-delay: 0.4s; }
+
+.footer-col h3 {
+    color: #ffffff;
+    font-size: 1.2em;
+    margin-top: 0;
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.footer-col h3::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: #f0ad4e;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.footer-col p {
+    margin-bottom: 15px;
+    color: #cccccc;
+}
+
+.btn.btn-primary {
+    display: inline-block;
+    background-color: #f0ad4e;
+    color: #333333 !important;
+    padding: 10px 25px;
+    border: 1px solid #f0ad4e;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.9em;
+    margin-top: 15px;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+.btn.btn-primary:hover {
+    background-color: #eea236;
+    border-color: #eea236;
+    color: #333333 !important;
+}
+
+.footer-list { list-style: none; padding: 0; margin: 0; }
+.footer-list li {
+    padding: 8px 0;
+    border-bottom: 1px dotted #555555;
+}
+.footer-list li:last-child { border-bottom: none; }
+/* Color from your HTML, you can make it consistent with other links */
+.footer-list li a { color: wheat; text-decoration: none; transition: color 0.3s ease; }
+.footer-list li a:hover { color: #f0ad4e; }
+
+.featured-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+.featured-grid img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border: 1px solid #444;
+    transition: opacity 0.3s ease;
+    border-radius: 3px;
+}
+.featured-grid a:hover img { opacity: 0.7; }
+
+.contact-list { list-style: none; padding: 0; margin: 0; }
+.contact-list li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+.contact-list i {
+    margin-right: 12px;
+    margin-top: 4px;
+    color: #f0ad4e;
+    width: 16px;
+    text-align: center;
+    flex-shrink: 0; /* Prevent icon from shrinking */
+}
+.contact-list a { color: #f0ad4e; text-decoration: none; transition: color 0.3s ease; } /* Make email link gold */
+.contact-list a:hover { color: #ffffff; }
+
+.footer-divider {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(85, 85, 85, 0), rgba(85, 85, 85, 0.75), rgba(85, 85, 85, 0));
+    margin: 30px 0 20px 0; /* Adjusted margin */
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    font-size: 0.9em;
+    color: #aaaaaa;
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-out 0.5s forwards;
+}
+
+.footer-copyright p { margin: 0; }
+.footer-copyright a { color: #f0ad4e; text-decoration: none; } /* Match highlight color */
+.footer-copyright a:hover { text-decoration: underline; color: #ffffff; }
+
+.back-to-top {
+    display: inline-flex; /* Use flex for centering icon */
+    align-items: center;
+    justify-content: center;
+    background-color: #f0ad4e;
+    color: #ffffff !important;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+.back-to-top:hover { background-color: #eea236; color: #ffffff !important; }
+.back-to-top i { line-height: 1; /* Helps with icon vertical alignment in flex */ }
+
+
+.footer-social { display: flex; align-items: center; }
+.footer-social span { margin-right: 15px; }
+.footer-social ul { display: flex; list-style: none; padding: 0; margin: 0; }
+.footer-social li { margin-left: 12px; }
+.footer-social a { color: #aaaaaa; font-size: 1.3em; text-decoration: none; transition: color 0.3s ease; }
+.footer-social a:hover { color: #ffffff; }
+
+
+/* --- RESPONSIVE STYLES --- */
+@media (max-width: 991px) { /* Tablet and Mobile Breakpoint */
+    header {
+        padding: 15px 20px;
+        height: 70px; /* Adjust height for mobile if needed */
+    }
+
+    .logo {
+        font-size: 24px;
+        margin-right: 0; /* Remove margin-right if hamburger is taking its place */
+    }
+
+    .main-nav {
+        order: 4; /* Nav comes after logo, hamburger, and actions visually */
+        width: 100%;
+        max-height: 0; /* Collapsed */
+        overflow: hidden;
+        background-color: rgba(10, 10, 10, 0.97); /* Darker, more opaque for mobile menu */
+        position: absolute; /* Take out of flow, position relative to header */
+        top: 70px; /* Position below the 70px header */
+        left: 0;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        transition: max-height 0.4s ease-in-out;
+    }
+
+    .main-nav.nav-open {
+        max-height: calc(100vh - 70px); /* Max height to fill screen below header */
+        overflow-y: auto; /* Allow scroll if menu is very long */
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 10px 0; /* Padding top/bottom for the list */
+    }
+
+    .main-nav ul li {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .main-nav ul li a {
+        display: block;
+        padding: 15px 20px;
+        text-align: left; /* Or center */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        font-size: 15px;
+    }
+    .main-nav ul li:last-child a {
+        border-bottom: none;
+    }
+
+    .main-nav ul li a:hover,
+    .main-nav ul li a.active:hover { /* Consistent hover for mobile */
+        background-color: rgba(255, 255, 255, 0.08);
+        color: #d4af37;
+        border-bottom-color: rgba(255, 255, 255, 0.1); /* Keep border consistent on hover */
+    }
+    .main-nav ul li a.active { /* Active style for mobile */
+        background-color: rgba(212, 175, 55, 0.1); /* Slight gold tint for active */
+        color: #d4af37;
+        border-bottom-color: #d4af37; /* Highlight active with gold underline */
+    }
+
+    .hamburger-menu {
+        display: block; /* Show hamburger */
+        order: 2; /* Hamburger after logo */
+        margin-left: auto; /* Pushes hamburger to the right of logo */
+    }
+
+    .header-actions {
+        order: 3; /* Actions after hamburger */
+        margin-left: 15px; /* Space between hamburger and actions */
+    }
+    .header-actions .social-icons {
+        display: none; /* Hide social icons in header on smaller screens */
+    }
+    .cta-button {
+        margin-left: 0; /* No margin as social icons are gone */
+        padding: 8px 15px;
+        font-size: 13px;
+    }
+
+    /* Footer columns */
+    .footer-main {
+        gap: 40px; /* Increase gap for stacked/wrapped items */
+    }
+    .footer-col {
+        flex-basis: calc(50% - 20px); /* Two columns */
+        min-width: unset;
+    }
+    .featured-grid {
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); /* More responsive grid */
+    }
+}
+
+@media (max-width: 767px) { /* Smaller Mobile Breakpoint */
+    .logo {
+        font-size: 20px;
+    }
+    .hamburger-menu {
+        font-size: 22px;
+    }
+
+    .header-actions {
+        /* Optionally hide CTA button too on very small screens, or move it into mobile menu */
+         display: none; /* Hides the Book a Table button and social icons wrapper */
+    }
+    /* If header-actions are hidden, hamburger is the last item and margin-left: auto pushes it right */
+
+    .hero-content .script-title { font-size: 50px; }
+    .hero-content h1 { font-size: 36px; }
+    .hero-content p { font-size: 15px; }
+
+    .contact-section h2 { font-size: 28px; }
+    .contact-section p { font-size: 15px; }
+    /* Form inputs stack */
+    .form-wrapper input[type="text"],
+    .form-wrapper input[type="email"],
+    .form-wrapper input[type="tel"] {
+        width: 100%;
+    }
+
+    /* Footer columns stack */
+    .footer-col {
+        flex-basis: 100%;
+        text-align: center; /* Center content in stacked columns */
+    }
+    .footer-col h3::after { /* Center the underline */
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .contact-list li { /* Center contact list items */
+        justify-content: center;
+    }
+    .featured-grid {
+        grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-copyright { order: 2; }
+    .back-to-top { order: 1; margin-bottom: 15px; }
+    .footer-social { order: 3; margin-top: 15px; }
+}
+
+@media (max-width: 480px) { /* Extra Small Screens */
+    header {
+        height: 60px; /* Even smaller header */
+        padding: 10px 15px;
+    }
+    .main-nav {
+        top: 60px; /* Adjust mobile menu position */
+    }
+    .main-nav.nav-open {
+        max-height: calc(100vh - 60px);
+    }
+    .logo { font-size: 18px;}
+    .hamburger-menu { font-size: 20px;}
+
+    .hero-content .script-title { font-size: 36px; }
+    .hero-content h1 { font-size: 28px; }
+
+    .contact-section { padding: 50px 15px; }
+    .contact-section h2 { font-size: 24px; }
+
+    .site-footer .container { padding: 0 15px; } /* Less padding on smallest screens */
+    .footer-col { min-width: 100%; } /* Ensure full width */
+
+}
